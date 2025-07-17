@@ -1,0 +1,13 @@
+*.csv
+*.xlsx
+*.json
+
+.env
+config.py
+
+__pycache__/
+.vscode/
+.idea/
+
+.DS_Store
+Thumbs.db
