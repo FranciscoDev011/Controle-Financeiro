@@ -6,7 +6,7 @@ import plotly.express as px
 
 ARQUIVO_DADOS = "lancamentos.csv"
 
-# Se não existir o CSV ainda, cria o DataFrame vazio
+# Salvamento dos Dados
 if not os.path.exists(ARQUIVO_DADOS):
     df_inicial = pd.DataFrame(columns=[
         "Data",
@@ -21,13 +21,13 @@ if not os.path.exists(ARQUIVO_DADOS):
 # Carrega dados existentes
 df = pd.read_csv(ARQUIVO_DADOS)
 
-# Inicializa a página atual na Session State
+# Inicializa a página atual na Session
 if "pagina" not in st.session_state:
     st.session_state.pagina = "Página Inicial"
 
-# Sidebar com botões de navegação
+# Navegador usando Sidebar
 st.sidebar.title("Navegação")
-
+# Páginas do Navegador
 if st.sidebar.button("🏠 Página Inicial"):
     st.session_state.pagina = "Página Inicial"
 if st.sidebar.button("📋 Lançamentos"):
